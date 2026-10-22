@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071314">
+  <meta name="description" content="Fadimenur — frontend öğrencisi, arayüz meraklısı ve web'in yaratıcı tarafında.">
+  <title>Fadimenur — Frontend Öğrencisi</title>
+  <style>
+    :root{color-scheme:dark;--bg:#071314;--panel:#0d1d1e;--text:#edf8f4;--muted:#9bb5ae;--green:#72f2b4;--blue:#6dbdff;--line:rgba(196,255,230,.12);--mono:ui-monospace,SFMono-Regular,Menlo,monospace;--sans:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.6;overflow-x:hidden}a{color:inherit;text-decoration:none}.grid-bg{position:fixed;inset:0;pointer-events:none;z-index:-2;background-image:linear-gradient(rgba(125,247,190,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(125,247,190,.035) 1px,transparent 1px);background-size:54px 54px;mask-image:linear-gradient(to bottom,black,transparent 85%)}.glow{position:absolute;z-index:-1;pointer-events:none;width:520px;height:520px;filter:blur(120px);border-radius:50%;opacity:.15}.glow.one{background:#11dd9a;top:-250px;left:-180px}.glow.two{background:#178bff;top:220px;right:-380px}
+    .wrap{width:min(1080px,calc(100% - 48px));margin-inline:auto}.nav{height:84px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:11px;font-weight:720;letter-spacing:-.03em}.brand-mark{display:grid;place-items:center;width:34px;height:34px;border-radius:11px;color:#061612;background:linear-gradient(135deg,var(--green),var(--blue));font-family:var(--mono);font-size:17px;font-weight:900}.nav-links{display:flex;align-items:center;gap:32px;color:var(--muted);font-size:14px}.nav-links a:hover{color:var(--green)}.nav-cta{padding:9px 15px;border:1px solid var(--line);border-radius:8px;color:var(--text)!important}
+    .hero{min-height:620px;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:48px;padding:78px 0 88px}.eyebrow{font:12px var(--mono);letter-spacing:.11em;text-transform:uppercase;color:var(--green);display:flex;align-items:center;gap:10px}.eyebrow:before{content:"";width:24px;height:1px;background:currentColor}.hero h1{font-size:clamp(52px,7vw,86px);letter-spacing:-.075em;line-height:.99;margin:23px 0}.hero h1 span{background:linear-gradient(100deg,var(--green),#7acbff 85%);color:transparent;background-clip:text}.hero-copy{max-width:510px;color:var(--muted);font-size:17px}.hero-actions{display:flex;gap:13px;margin-top:29px;flex-wrap:wrap}.button{border:1px solid var(--line);border-radius:9px;padding:12px 18px;font-size:14px;font-weight:650;display:inline-flex;align-items:center;gap:10px;transition:.2s}.button.primary{border:0;color:#061712;background:linear-gradient(110deg,var(--green),#91e9c6)}.button:hover{transform:translateY(-2px);box-shadow:0 9px 32px #57e5b51c}.arrow{font-size:18px;line-height:10px}.hero-foot{margin-top:45px;color:#6e8982;font:12px var(--mono);display:flex;gap:22px}.hero-foot span:before{content:"✳";color:var(--green);margin-right:8px}
+    .terminal{background:linear-gradient(145deg,rgba(16,39,38,.94),rgba(8,23,27,.97));border:1px solid rgba(165,255,220,.16);border-radius:17px;box-shadow:0 25px 90px #0007;overflow:hidden;transform:rotate(1.2deg)}.term-bar{height:48px;padding:0 17px;display:flex;align-items:center;gap:7px;border-bottom:1px solid var(--line);color:#75918a;font:11px var(--mono)}.dot{width:7px;height:7px;border-radius:50%;background:#4e7068}.term-name{margin-left:auto}.term-body{padding:26px 25px 30px;font:13px/2 var(--mono);color:#b6d2c9}.code-line{white-space:nowrap}.ln{display:inline-block;width:27px;color:#45635d}.key{color:#7dd5ff}.str{color:var(--green)}.fn{color:#c6a5ff}.comment{color:#56756b}.indent{padding-left:26px}.cursor{display:inline-block;width:7px;height:15px;vertical-align:middle;background:var(--green);animation:blink 1s steps(2) infinite}@keyframes blink{to{visibility:hidden}}
+    .section{padding:80px 0;border-top:1px solid var(--line)}.section-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:32px;gap:20px}.section h2{font-size:clamp(30px,4vw,43px);letter-spacing:-.055em;line-height:1.1;margin:12px 0 0}.section-lead{max-width:430px;color:var(--muted);font-size:14px;margin:0}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{border:1px solid var(--line);background:linear-gradient(140deg,#112322a8,#0b191a);padding:23px;border-radius:13px;min-height:187px;transition:.2s}.card:hover{transform:translateY(-4px);border-color:#72f2b44d}.card-icon{width:37px;height:37px;display:grid;place-items:center;border-radius:10px;background:#6de9b214;color:var(--green);font-size:17px}.card h3{margin:17px 0 5px;font-size:16px}.card p{margin:0;color:var(--muted);font-size:13px}.about-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:70px;align-items:start}.about-copy{font-size:17px;color:var(--muted);margin:0}.about-copy strong{color:var(--text);font-weight:580}.tags{display:flex;gap:9px;flex-wrap:wrap;margin-top:25px}.tag{border:1px solid var(--line);border-radius:99px;padding:7px 12px;color:#b2c9c1;font:11px var(--mono)}.tag:before{content:"#";color:var(--green)}
+    .project{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:25px 0;border-top:1px solid var(--line)}.project:last-child{border-bottom:1px solid var(--line)}.project-label{font:11px var(--mono);color:var(--green)}.project h3{margin:5px 0 4px;font-size:20px;letter-spacing:-.03em}.project p{margin:0;color:var(--muted);font-size:13px}.project-arrow{width:39px;height:39px;display:grid;place-items:center;border:1px solid var(--line);border-radius:50%;color:var(--green);font-size:20px;flex:none}
+    .contact{padding:66px 0 76px;border:1px solid rgba(114,242,180,.17);border-radius:17px;background:radial-gradient(ellipse at 80% 0%,#157a6225,transparent 45%),#0c1b1c;margin:25px auto 75px;text-align:center}.contact h2{font-size:clamp(34px,5vw,54px);letter-spacing:-.065em;margin:14px 0}.contact p{color:var(--muted);margin:0 auto 25px;max-width:460px;font-size:14px}.contact .eyebrow{justify-content:center}.contact .eyebrow:before{display:none}.footer{border-top:1px solid var(--line);padding:23px 0 30px;display:flex;justify-content:space-between;gap:15px;color:#6e8982;font:11px var(--mono)}.footer a:hover{color:var(--green)}
+    .playground{display:grid;grid-template-columns:1fr 1fr;gap:18px}.play-card{border:1px solid var(--line);background:linear-gradient(140deg,#112322a8,#0b191a);padding:24px;border-radius:14px}.play-card h3{margin:5px 0 7px;font-size:18px}.play-card p{margin:0;color:var(--muted);font-size:13px}.palette{display:flex;gap:10px;margin:23px 0 20px}.swatch{flex:1;height:82px;border-radius:10px;border:1px solid #ffffff19;transition:background .3s}.palette-controls{display:flex;align-items:center;justify-content:space-between;gap:12px}.palette-code{font:11px var(--mono);color:#a9c1b8}.tiny-button{background:#122625;border:1px solid var(--line);color:var(--text);border-radius:8px;padding:9px 12px;font:12px var(--mono);cursor:pointer}.tiny-button:hover{border-color:var(--green);color:var(--green)}.fact-list{display:grid;gap:10px;margin-top:18px}.fact{display:flex;gap:13px;align-items:flex-start;padding:12px 0;border-top:1px solid var(--line);color:var(--muted);font-size:13px}.fact b{color:var(--green);font:11px var(--mono);padding-top:3px}.quote-card{display:flex;flex-direction:column;justify-content:space-between;background:radial-gradient(ellipse at 90% 0%,#187be524,transparent 50%),linear-gradient(145deg,#102324,#0b191b)}.quote-mark{font-size:42px;line-height:1;color:var(--blue)}.quote-card blockquote{font-size:22px;line-height:1.4;letter-spacing:-.035em;margin:12px 0 25px}.quote-card blockquote span{color:var(--green)}.quote-sign{font:11px var(--mono);color:#78938b}
+    @media(max-width:760px){.wrap{width:min(100% - 36px,560px)}.nav{height:70px}.nav-links{gap:16px}.nav-links a:not(.nav-cta){display:none}.hero{grid-template-columns:1fr;gap:42px;padding:70px 0 75px;min-height:auto}.hero h1{font-size:clamp(54px,14vw,78px)}.terminal{transform:none}.term-body{overflow:auto;font-size:11px;padding:20px 15px}.section{padding:64px 0}.section-head{display:block}.section-lead{margin-top:14px}.cards{grid-template-columns:1fr}.card{min-height:0}.about-grid{grid-template-columns:1fr;gap:22px}.playground{grid-template-columns:1fr}.contact{margin:5px auto 55px;padding:52px 20px}.footer{flex-direction:column;align-items:center;text-align:center}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
+  </style>
+</head>
+<body>
+  <div class="grid-bg"></div><div class="glow one"></div><div class="glow two"></div>
+  <header class="wrap nav">
+    <a class="brand" href="#home" aria-label="Fadimenur ana sayfa"><span class="brand-mark">f.</span><span>fadimenur<span style="color:var(--green)">/</span></span></a>
+    <nav class="nav-links" aria-label="Ana menü"><a href="#hakkimda">Hakkımda</a><a href="#odak">Odak alanlarım</a><a class="nav-cta" href="#iletisim">İletişim <span style="color:var(--green)">↗</span></a></nav>
+  </header>
+  <main id="home">
+    <section class="wrap hero">
+      <div>
+        <div class="eyebrow">Frontend öğrencisi · Yaratıcı zihin</div>
+        <h1>Merhaba,<br>ben <span>Fadimenur.</span></h1>
+        <p class="hero-copy">Web'in renklerle, kodla ve iyi fikirlerle buluştuğu yerdeyim. Öğreniyor, deniyor ve her gün daha güzel arayüzler kuruyorum.</p>
+        <div class="hero-actions"><a class="button primary" href="#hakkimda">Beni tanı <span class="arrow">↘</span></a><a class="button" href="#odak">Neler öğreniyorum?</a></div>
+        <div class="hero-foot"><span>merakla öğreniyorum</span><span>adım adım üretiyorum</span></div>
+      </div>
+      <div class="terminal" aria-label="Kod editörü görünümünde kişisel tanıtım">
+        <div class="term-bar"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span class="term-name">about-me.js</span></div>
+        <div class="term-body">
+          <div class="code-line"><span class="ln">01</span><span class="key">const</span> fadimenur = {</div>
+          <div class="code-line indent"><span class="ln">02</span>rol: <span class="str">"frontend öğrencisi"</span>,</div>
+          <div class="code-line indent"><span class="ln">03</span>merak: [<span class="str">"web"</span>, <span class="str">"tasarım"</span>],</div>
+          <div class="code-line indent"><span class="ln">04</span>renkler: [<span class="str">"yeşil"</span>, <span class="str">"mavi"</span>],</div>
+          <div class="code-line indent"><span class="ln">05</span>hayal: <span class="str">"fikirleri ekrana taşımak"</span>,</div>
+          <div class="code-line indent"><span class="ln">06</span>durum: <span class="fn">() =&gt;</span> <span class="str">"öğreniyor ve üretiyor ✨"</span></div>
+          <div class="code-line"><span class="ln">07</span>}; <span class="comment">// yolculuk devam ediyor</span></div>
+          <div class="code-line"><span class="ln">08</span><span class="cursor"></span></div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="hakkimda"><div class="wrap about-grid">
+      <div><div class="eyebrow">01 / Hakkımda</div><h2>Her güzel arayüz<br>bir merakla başlar.</h2></div>
+      <div><p class="about-copy">Ben <strong>Fadimenur</strong>, kullanıcıların keyifle kullanacağı dijital deneyimler tasarlamayı seven bir frontend öğrencisiyim. Kodun mantığını keşfederken tasarımın hissettirdiklerine de önem veriyorum. Şu an temellerimi güçlendiriyor, küçük projelerle öğrendiklerimi pratiğe döküyorum.</p><div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">UI merakı</span><span class="tag">öğrenme modu</span></div></div>
+    </div></section>
+    <section class="section" id="odak"><div class="wrap">
+      <div class="section-head"><div><div class="eyebrow">02 / Şu sıralar</div><h2>Öğrenirken odağım</h2></div><p class="section-lead">Sağlam temeller kurup bunları küçük, gerçek arayüzlere dönüştürüyorum.</p></div>
+      <div class="cards">
+        <article class="card"><span class="card-icon">⌘</span><h3>Arayüz geliştirme</h3><p>HTML ve CSS ile düzenli, erişilebilir ve farklı ekranlara uyum sağlayan sayfalar.</p></article>
+        <article class="card"><span class="card-icon">◈</span><h3>Etkileşim ve mantık</h3><p>JavaScript'in temelleriyle sayfalara hareket ve anlamlı etkileşimler katmak.</p></article>
+        <article class="card"><span class="card-icon">✳</span><h3>Tasarım gözü</h3><p>Renk, boşluk ve tipografiyi bir araya getirerek kendine ait bir görsel dil keşfetmek.</p></article>
+      </div>
+    </div></section>
+    <section class="section" id="atolye"><div class="wrap">
+      <div class="section-head"><div><div class="eyebrow">03 / Mini atölyem</div><h2>Renklerle biraz oynayalım.</h2></div><p class="section-lead">Tasarımda en sevdiğim şeylerden biri renklerin bir araya gelişini keşfetmek.</p></div>
+      <div class="playground">
+        <article class="play-card"><span class="project-label">RENK DENEMESİ · INTERACTIVE</span><h3>Rastgele bir palet üret</h3><p>Bir dokunuşla yeni bir renk uyumu keşfet. Belki sonraki projemde kullanırım!</p><div class="palette" aria-label="Renk paleti"><span class="swatch"></span><span class="swatch"></span><span class="swatch"></span><span class="swatch"></span></div><div class="palette-controls"><span class="palette-code" aria-live="polite">#72F2B4 · #6DBDFF · #0D1D1E · #EDF8F4</span><button class="tiny-button" id="shuffle" type="button">↻ Yeni palet</button></div></article>
+        <article class="play-card quote-card"><div><span class="project-label">KÜÇÜK BİR NOT</span><div class="quote-mark">“</div><blockquote>Her gün biraz öğren,<br><span>sonra biraz daha dene.</span></blockquote></div><div class="quote-sign">— Fadimenur'un öğrenme notu</div></article>
+      </div>
+    </div></section>
+    <section class="section" id="biraz-ben"><div class="wrap about-grid">
+      <div><div class="eyebrow">04 / Biraz da ben</div><h2>Kod dışında<br>da meraklıyım.</h2></div>
+      <div><p class="about-copy">İyi bir tasarımın yalnızca güzel görünmesini değil, <strong>insana kendini iyi hissettirmesini</strong> de seviyorum. İlhamımı bazen küçük detaylardan, bazen de yeni şeyler denemekten alıyorum.</p><div class="fact-list"><div class="fact"><b>01</b><span>Favori atmosferim: gece modu ve yumuşak ışıklar.</span></div><div class="fact"><b>02</b><span>Tasarımda vazgeçemediğim renkler: yeşil ve mavi.</span></div><div class="fact"><b>03</b><span>Şu anki hedefim: her öğrendiğim konuyu küçük bir projeyle pekiştirmek.</span></div></div></div>
+    </div></section>
+    <section class="section"><div class="wrap">
+      <div class="section-head"><div><div class="eyebrow">05 / Yolculuğum</div><h2>Küçük adımlar, yeni fikirler.</h2></div><p class="section-lead">Her deneme, bir sonraki projeye taşınan yeni bir şey öğretiyor.</p></div>
+      <article class="project"><div><span class="project-label">İLK ADIM · 01</span><h3>Kişisel portfolyo</h3><p>Kendimi ve öğrenme yolculuğumu anlatan bu sayfa.</p></div><span class="project-arrow" aria-hidden="true">↗</span></article>
+      <article class="project"><div><span class="project-label">SIRADAKİ FİKİR · 02</span><h3>Bir sonraki proje burada</h3><p>Yeni öğrendiklerimle bu alanı yakında güncelleyeceğim.</p></div><span class="project-arrow" aria-hidden="true">＋</span></article>
+    </div></section>
+    <section class="wrap contact" id="iletisim"><div class="eyebrow">06 / İletişim</div><h2>Bir fikrin mi var?</h2><p>Yeni şeyler öğrenmeye, güzel fikirler üzerine konuşmaya ve birlikte üretmeye açığım.</p><span class="button primary">İletişim bilgilerim yakında <span class="arrow">✳</span></span></section>
+  </main>
+  <footer class="wrap footer"><span>© 2026 Fadimenur · Merakla ve biraz kodla yapıldı.</span><a href="#home">Başa dön ↑</a></footer>
+  <script>
+    const palettes = [['#72F2B4','#6DBDFF','#0D1D1E','#EDF8F4'],['#A3E635','#38BDF8','#172554','#F0FDF4'],['#34D399','#818CF8','#111827','#E0F2FE'],['#5EEAD4','#60A5FA','#14213D','#F8FAFC'],['#86EFAC','#22D3EE','#164E63','#ECFEFF'],['#4ADE80','#93C5FD','#1E293B','#F0FDF4']];let paletteIndex=0;const swatches=document.querySelectorAll('.swatch');const paletteCode=document.querySelector('.palette-code');palettes[0].forEach((color,i)=>swatches[i].style.background=color);document.querySelector('#shuffle').addEventListener('click',()=>{paletteIndex=(paletteIndex+1)%palettes.length;const colors=palettes[paletteIndex];colors.forEach((color,i)=>swatches[i].style.background=color);paletteCode.textContent=colors.join(' · ')});
+  </script>
+</body>
+</html>
